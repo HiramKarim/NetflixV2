@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct HomeViewScene: View {
+    var homeVM = HomeVM()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color.black
+                .ignoresSafeArea()
+            
+            ScrollView(showsIndicators: false) { // main container
+                
+                SharedCategoriesViewSection(vm: homeVM)
+                
+            } // main container
+            
+        }
+        .foregroundStyle(.white)
     }
 }
 

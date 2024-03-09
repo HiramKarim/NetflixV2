@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct MovieModel {
+struct MovieModel: Hashable {
     var id: String
     var name: String
-    var thumbnailURL: URL
+    var thumbnailURL: URL?
 }
