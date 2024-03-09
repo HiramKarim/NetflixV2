@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "EB18E306-94F2-4919-83D7-4670AFAE0D8A",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testExecutionOrdering" : "random",
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:NetflixV2.xcodeproj",
+        "identifier" : "1FB6B2172B9CEEA4005BDD97",
+        "name" : "NetflixV2Tests"
+      }
+    }
+  ],
+  "version" : 1
+}

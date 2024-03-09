@@ -20,6 +20,9 @@
 		1FB6B24D2B9D04FF005BDD97 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1FB6B24C2B9D04FF005BDD97 /* Kingfisher */; };
 		1FB6B2502B9D084C005BDD97 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6B24F2B9D084C005BDD97 /* HomeVM.swift */; };
 		1FB6B2532B9D1DD3005BDD97 /* SharedCategoriesViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6B2522B9D1DD3005BDD97 /* SharedCategoriesViewSection.swift */; };
+		1FB6B2542B9D2ABB005BDD97 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6B24F2B9D084C005BDD97 /* HomeVM.swift */; };
+		1FB6B2552B9D2C31005BDD97 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6B23D2B9CF615005BDD97 /* MovieModel.swift */; };
+		1FB6B2562B9D2C53005BDD97 /* MovieMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6B2462B9CFAC7005BDD97 /* MovieMockData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,7 @@
 		1FB6B2462B9CFAC7005BDD97 /* MovieMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMockData.swift; sourceTree = "<group>"; };
 		1FB6B24F2B9D084C005BDD97 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		1FB6B2522B9D1DD3005BDD97 /* SharedCategoriesViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedCategoriesViewSection.swift; sourceTree = "<group>"; };
+		1FB6B2572B9D2EAB005BDD97 /* MoviesAndCategoriesTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = MoviesAndCategoriesTestPlan.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				1FB6B21C2B9CEEA4005BDD97 /* NetflixV2Tests.swift */,
+				1FB6B2572B9D2EAB005BDD97 /* MoviesAndCategoriesTestPlan.xctestplan */,
 			);
 			path = NetflixV2Tests;
 			sourceTree = "<group>";
@@ -390,7 +395,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FB6B2552B9D2C31005BDD97 /* MovieModel.swift in Sources */,
 				1FB6B21D2B9CEEA4005BDD97 /* NetflixV2Tests.swift in Sources */,
+				1FB6B2562B9D2C53005BDD97 /* MovieMockData.swift in Sources */,
+				1FB6B2542B9D2ABB005BDD97 /* HomeVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
