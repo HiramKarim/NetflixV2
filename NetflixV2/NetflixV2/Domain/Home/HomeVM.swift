@@ -21,12 +21,7 @@ final class HomeVM: ObservableObject {
     }
     
     private func setupMovies() {
-        movies["Trending Now"] = moviesExample
-        movies["Comedy"] = moviesExample
-        movies["New Releases"] = moviesExample
-        movies["Watch It Again"] = moviesExample
-        movies["Sci-Fi"] = moviesExample
-        movies["Horror"] = moviesExample
+        movies = MovieModel.getMoviesCatalog()
     }
 }
 
