@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeViewScene: View {
     var homeVM = HomeVM()
+    let screen = UIScreen.main.bounds
     
     var body: some View {
         ZStack {
@@ -17,12 +18,18 @@ struct HomeViewScene: View {
             
             ScrollView(showsIndicators: false) { // main container
                 
+                SharedTopPreviewViewSection(movie: movie1)
+                    .frame(width: screen.width, alignment: .top)
+                    .padding(.top, -20)
+                    .padding(.bottom)
+                
                 SharedCategoriesViewSection(vm: homeVM)
                 
             } // main container
             
         }
         .foregroundStyle(.white)
+        .ignoresSafeArea(.all)
     }
 }
 

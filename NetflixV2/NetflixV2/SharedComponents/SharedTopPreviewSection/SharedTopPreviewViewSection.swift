@@ -11,6 +11,18 @@ import Kingfisher
 struct SharedTopPreviewViewSection: View {
     
     var movie: MovieModel
+    
+    let gradientColors = Gradient(stops: [
+        .init(color: .black, location: 0),
+        .init(color: .black, location: 0.70),
+        .init(color: .black, location: 1)
+    ])
+    
+    let linearGradient = LinearGradient(gradient: Gradient(colors: [Color.red, 
+                                                                    Color.blue]),
+                                        startPoint: .top,
+                                        endPoint: .bottom)
+    
     @State var myListbuttonPressed: Bool = false
     
     private func isLastCategory(withCategory category: String) -> Bool {
@@ -33,9 +45,11 @@ struct SharedTopPreviewViewSection: View {
                 HStack {
                     ForEach(movie.categories, id: \.self) { category in
                         Text(category)
+                            .font(.callout)
                         if !isLastCategory(withCategory: category) {
                             Circle()
                                 .frame(width: 5, height: 5)
+                                .foregroundStyle(.blue)
                         }
                     }
                 }
@@ -43,28 +57,43 @@ struct SharedTopPreviewViewSection: View {
                 .font(.subheadline)
                 
                 HStack {
-                    Button("Play", 
+                    VStack {
+                        Image(systemName: isMyListButtonPressed(isPressed: myListbuttonPressed))
+                        Button(action: {
+                            myListbuttonPressed.toggle()
+                        }, label: {
+                            Text("My list")
+                                .font(.headline)
+                        })
+                    }
+                    .padding(.trailing, 20)
+                    
+                    Button("Play",
                            systemImage: "play.fill") {
                         
                     }
                     .frame(width: 180, height: 40)
                     .font(.headline)
                     .foregroundStyle(.black)
-                    .background(RoundedRectangle(cornerRadius: 8)
+                    .background(RoundedRectangle(cornerRadius: 5)
                         .fill(Color(UIColor.white)))
                     
-                    Button("My list",
-                           systemImage: isMyListButtonPressed(isPressed: myListbuttonPressed)) {
-                        myListbuttonPressed.toggle()
+                    VStack {
+                        Image(systemName: "info.circle")
+                        Button(action: {
+                            
+                        }, label: {
+                            Text("Info")
+                                .font(.headline)
+                        })
                     }
-                    .frame(width: 180, height: 40)
-                    .foregroundStyle(.white)
-                    .font(.headline)
-                    .background(RoundedRectangle(cornerRadius: 8)
-                        .fill(Color(UIColor.lightGray).opacity(0.5)))
+                    .padding(.leading, 20)
                 }
             }
             .padding()
+            .background(LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.0), Color.black.opacity(0.95)]),
+                                       startPoint: .top,
+                                       endPoint: .bottom))
         }
         .foregroundStyle(.white)
     }
